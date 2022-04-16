@@ -10,6 +10,8 @@ object BuildAndroidConfig {
     val VERSION_CODE get() = generateVersionCode()
     val VERSION_NAME get() = "$MAJOR.$MINOR.$PATCH"
 
+    val APP_NAME = "Cocktail-App"
+
     private fun generateVersionCode(): Int {
         val biggest = MIN_SDK * 1000000
         val major = MAJOR * 10000
