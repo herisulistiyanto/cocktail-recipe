@@ -27,3 +27,7 @@ local.properties
 
 # project specific
 config.properties
+secret.properties
+/signature/
+/app/debug
+/app/release
