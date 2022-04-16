@@ -25,7 +25,6 @@ android {
             storePassword = keystoreMap["debug_store_pass"]
         }
         create("release") {
-            println("keystoreMap : $keystoreMap")
             keyAlias = keystoreMap["release_alias"]
             keyPassword = keystoreMap["release_pass"]
             storeFile = file("$rootDir/${keystoreMap["release_store_path"].orEmpty()}")

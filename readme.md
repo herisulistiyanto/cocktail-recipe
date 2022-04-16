@@ -20,7 +20,8 @@ Sample playground project for learning purpose in modern Android development.
 - [SplashScreen API](https://developer.android.com/guide/topics/ui/splash-screen) - Splash screen API for android
 
 #### Architecture
-This app is based on MVVM architecture and Repository pattern. It also use NetworkBoundResource to cache the network response into database for offline support.
+This app is based on MVVM architecture with Single Activity approach and Repository pattern. 
+It also use NetworkBoundResource to cache the network response into database for offline support.
 
 #### Screenshots
 
