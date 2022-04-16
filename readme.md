@@ -22,3 +22,9 @@ Sample playground project for learning purpose in modern Android development.
 #### Architecture
 This app is based on MVVM architecture and Repository pattern. It also use NetworkBoundResource to cache the network response into database for offline support.
 
+#### Screenshots
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/12156917/163665454-8834cc5a-f392-4ad4-a6df-04e28d2c2364.png" alt="Home" width="32%">
+  <img src="https://user-images.githubusercontent.com/12156917/163665692-40671949-9330-4f21-80b6-2ef299bdd596.png" alt="Detail" width="32%">
+</p>
