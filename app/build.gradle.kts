@@ -1,6 +1,7 @@
 import deps.Dependencies
 import deps.TestDependencies
 import utils.ConfigUtil
+import com.android.build.api.artifact.SingleArtifact
 
 plugins {
     id("com.android.application")
@@ -63,6 +64,32 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = false
+    }
+}
+
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        val target = variant.name.capitalize()
+        tasks.register("assembleApk$target") {
+            group = "build"
+            description = "Generate APK with version name for $target variant."
+            dependsOn(tasks.findByPath("assemble$target"))
+            val apkFile = variant.artifacts.get(SingleArtifact.APK).get().asFile
+            val apkName = apkFile.name
+            val apkFolder = apkFile.absolutePath
+            doLast {
+                copy {
+                    from(apkFolder) {
+                        include("**/*$apkName.apk")
+                    }
+                    into(apkFolder)
+                    rename {
+                        "${BuildAndroidConfig.APP_NAME}-${variant.buildType}-${BuildAndroidConfig.VERSION_NAME}.apk"
+                    }
+
+                }
+            }
+        }
     }
 }
 
