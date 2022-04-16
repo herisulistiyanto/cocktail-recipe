@@ -11,6 +11,27 @@ plugins {
 }
 
 android {
+    val keystoreMap = mutableMapOf<String, String>()
+    if (file("$rootDir/secret.properties").exists()) {
+        ConfigUtil.loadConfigMap("./secret.properties") { key, value ->
+            keystoreMap[key] = value
+        }
+    }
+    signingConfigs {
+        getByName("debug") {
+            keyAlias = keystoreMap["debug_alias"]
+            keyPassword = keystoreMap["debug_pass"]
+            storeFile = file("$rootDir/${keystoreMap["debug_store_path"].orEmpty()}")
+            storePassword = keystoreMap["debug_store_pass"]
+        }
+        create("release") {
+            keyAlias = keystoreMap["release_alias"]
+            keyPassword = keystoreMap["release_pass"]
+            storeFile = file("$rootDir/${keystoreMap["release_store_path"].orEmpty()}")
+            storePassword = keystoreMap["release_store_pass"]
+        }
+    }
+
     defaultConfig {
         applicationId = "com.andro.indieschool.cocktailapp"
         versionCode = BuildAndroidConfig.VERSION_CODE
@@ -21,8 +42,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+            isDebuggable = true
+        }
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isDebuggable = false
+            isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
