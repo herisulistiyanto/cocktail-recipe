@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CocktailApp</string>
+    <string name="label_id">#%s</string>
+    <string name="text_remove_fav_confirmation">Remove item from favourite?</string>
+    <string name="text_delete_confirmation">Are you sure want to remove this item?</string>
+    <string name="text_item_added">Item added to favourite</string>
+    <string name="text_empty_message">Empty data . .</string>
+    <string name="text_error_message">Something went wrong</string>
+    <string name="text_coming_soon">Coming soon...</string>
+</resources>

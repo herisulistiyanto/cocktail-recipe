@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background"
+    tools:context="com.andro.indieschool.cocktailapp.feature.home.presentation.ui.nonalcohol.NonAlcoholFragment">
+
+    <ViewFlipper
+        android:id="@+id/flipper_non_alcohol_drink"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/layout_shimmer_list" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_rv_non_alcohol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_cocktail" />
+
+        <include layout="@layout/layout_common_error" />
+
+    </ViewFlipper>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

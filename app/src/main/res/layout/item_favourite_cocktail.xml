@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="4dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_cv_drink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_iv_image_drink"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            tools:src="@drawable/img_placeholder" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_tv_name_drink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:textColor="@color/strong_grey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/be_vietnam"
+        app:layout_constraintBottom_toTopOf="@+id/item_tv_drink_id"
+        app:layout_constraintLeft_toRightOf="@id/item_cv_drink"
+        app:layout_constraintRight_toLeftOf="@id/item_view_separator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="151 Florida Bushwacker" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_tv_drink_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        app:fontFamily="@font/be_vietnam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/item_tv_name_drink"
+        app:layout_constraintStart_toStartOf="@+id/item_tv_name_drink"
+        app:layout_constraintTop_toBottomOf="@+id/item_tv_name_drink"
+        tools:text="#1234" />
+
+    <View
+        android:id="@+id/item_view_separator"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="24dp"
+        android:background="@color/pale_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/item_frame_delete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/item_frame_delete"
+        android:layout_width="42dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_iv_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_round_delete_outline" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

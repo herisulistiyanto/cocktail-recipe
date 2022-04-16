@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.andro.indieschool.cocktailapp.feature.home.presentation.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/to_drinkDetailsFragment"
+            app:destination="@id/drinkDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.andro.indieschool.cocktailapp.feature.favourite.presentation.ui.FavouriteFragment"
+        android:label="Favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_drinkDetailsFragment"
+            app:destination="@id/drinkDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.andro.indieschool.cocktailapp.feature.settings.presentation.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/drinkDetailsFragment"
+        android:name="com.andro.indieschool.cocktailapp.feature.details.presentation.ui.drink.DrinkDetailsFragment"
+        android:label="DrinkDetailsFragment"
+        tools:layout="@layout/fragment_drink_details" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="isFavourite"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+
+</navigation>

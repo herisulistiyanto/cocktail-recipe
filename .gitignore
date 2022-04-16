@@ -1,0 +1,29 @@
+*.iml
+.gradle
+/local.properties
+
+# Ignored from .idea
+/.idea/caches
+/.idea/libraries
+/.idea/*.xml
+/.idea/**.iml
+# Retain from .idea
+!/.idea/compiler.xml
+!/.idea/gradle.xml
+!/.idea/runConfigurations.xml
+!/.idea/vcs.xml
+!/.idea/codeStyles/*.xml
+!/.idea/dictionaries/*.xml
+!/.idea/fileTemplates/*.*
+!/.idea/inspectionProfiles/*.xml
+!/.idea/runConfigurations/*.xml
+
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# project specific
+config.properties

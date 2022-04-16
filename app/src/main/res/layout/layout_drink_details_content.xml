@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_scroll_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/default_background"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_drink_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/be_vietnam_bold"
+            android:gravity="center_vertical"
+            android:textColor="@color/strong_grey"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/details_iv_like"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Es Jeruk" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/details_iv_like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/details_tv_drink_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/details_tv_drink_name"
+            app:srcCompat="@drawable/ic_love_border"
+            app:tint="@color/strong_grey" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_drink_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/be_vietnam_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_drink_name"
+            tools:text="#1234" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_label_serving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/be_vietnam_bold"
+            android:text="Serving Method"
+            android:textColor="@color/strong_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_drink_id" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_content_serving"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/be_vietnam"
+            android:textColor="@color/pale_grey"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_label_serving"
+            tools:text="Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass." />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_label_glass_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/be_vietnam_bold"
+            android:text="Recommended glass"
+            android:textColor="@color/strong_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_content_serving" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_content_glass_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/be_vietnam"
+            android:textColor="@color/pale_grey"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_label_glass_type"
+            tools:text="Cocktail glass" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_label_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/be_vietnam_bold"
+            android:text="Category"
+            android:textColor="@color/strong_grey"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_content_glass_type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_content_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/be_vietnam"
+            android:textColor="@color/pale_grey"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_label_category"
+            tools:text="Ordinary Drink" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_label_alcohol_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/be_vietnam_bold"
+            android:text="Alcohol level"
+            android:textColor="@color/strong_grey"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_content_category" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_content_alcohol_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/be_vietnam"
+            android:textColor="@color/pale_grey"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_label_alcohol_type"
+            tools:text="Alcoholic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_label_ingredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/be_vietnam_bold"
+            android:text="Ingredient"
+            android:textColor="@color/strong_grey"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_content_alcohol_type" />
+
+        <View
+            android:id="@+id/details_view_decor_ingredient"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@color/strong_grey"
+            app:layout_constraintBottom_toBottomOf="@id/details_tv_label_ingredient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/details_tv_label_ingredient"
+            app:layout_constraintTop_toTopOf="@id/details_tv_label_ingredient" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/details_tv_content_ingredient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/be_vietnam"
+            android:textColor="@color/pale_grey"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_tv_label_ingredient"
+            tools:text="Blended whiskey, Dry Vermouth, Pineapple juice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
