@@ -23,6 +23,10 @@ Sample playground project for learning purpose in modern Android development.
 This app is based on MVVM architecture with Single Activity approach and Repository pattern. 
 It also use NetworkBoundResource to cache the network response into database for offline support.
 
+#### Run the project
+To run this project, you might need to create a file named `config.properties` in the root project, which contain(s) properties : 
+    * `base_url="https://www.thecocktaildb.com/api/json/"` 
+
 #### Screenshots
 
 <p float="left">
